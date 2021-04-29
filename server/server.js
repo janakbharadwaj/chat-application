@@ -26,10 +26,10 @@ require('./routes')(app);
 const botName = "JB chat application"
 
 io.on("connection", (socket) => {
-  console.log("New client connected");
+  //console.log("New client connected");
 
   socket.on('joinGroup', ({ username, group }) => {
-    console.log("Join group")
+    //console.log("Join group")
     const user = userJoin(socket.id, username, group);
     socket.join(user.group);
 
@@ -52,15 +52,15 @@ io.on("connection", (socket) => {
 
     // Listen for chatMessage
     socket.on('chatMessage', message => {
-      console.log("message", message)
+      //console.log("message", message)
       const user = getCurrentUser(socket.id);
-      console.log("user", user)
+      //console.log("user", user)
 
       io.to(user.group).emit('message', formatMessage(user.username, message));
     });
 
     socket.on("disconnect", () => {
-      console.log("Client disconnected getApiAndEmit");
+      //console.log("Client disconnected getApiAndEmit");
     });
   });
 });
