@@ -23,7 +23,7 @@ const io = socketio(server, {
 
 require('./routes')(app);
 
-const botName = "JB chat application"
+const botName = "JB chat"
 
 io.on("connection", (socket) => {
   //console.log("New client connected");
