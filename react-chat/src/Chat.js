@@ -64,7 +64,7 @@ const Chat=(props) => {
             </header>
             <main className="chat-main">
                 <Button type="default" onClick={showModal}>
-                    Group Members
+                    View Group Members
                 </Button>
                 <Modal 
                     title="Group Members" 
@@ -115,7 +115,6 @@ const Chat=(props) => {
                         onChange={e => setMessage(e.target.value)}
                     />
                     <button className="btn">
-                        <i className="fas fa-paper-plane"></i> 
                         Send
                     </button>
                 </form>
