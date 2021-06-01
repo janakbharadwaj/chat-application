@@ -23,7 +23,6 @@ Group chat application inspired by WhatsApp, users can join in the desired group
 * Socket.io
 * Ant Design
 * react-router-dom
-* react-map-gl-geocoder
 * Express.js
 
  
